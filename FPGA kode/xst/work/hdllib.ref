@@ -1,0 +1,8 @@
+EN schem NULL "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/Schem.vhf" sub00/vhpl06 1432644420
+EN spi NULL "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/SPI.vhd" sub00/vhpl00 1432644414
+AR spi behavioral "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/SPI.vhd" sub00/vhpl01 1432644415
+EN vga NULL "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/VGA.vhd" sub00/vhpl04 1432644418
+EN memory NULL "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/ipcore_dir/Memory.vhd" sub00/vhpl02 1432644416
+AR memory memory_a "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/ipcore_dir/Memory.vhd" sub00/vhpl03 1432644417
+AR vga behavioral "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/VGA.vhd" sub00/vhpl05 1432644419
+AR schem behavioral "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/Schem.vhf" sub00/vhpl07 1432644421

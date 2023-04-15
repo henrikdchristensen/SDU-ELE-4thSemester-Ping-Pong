@@ -1,0 +1,2 @@
+vhdtdtfi -lib work SPI.vhd -prj FPGA_Program -o SPI.spl -module SPI -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e SPI.spl {C:/Users/Martin/Dropbox/Semersterprojekt 4/Xilinx/VGA/VGA og SPI/FPGA_Program/SPI.sym} 

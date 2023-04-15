@@ -1,0 +1,4 @@
+vhdl work "ipcore_dir/Memory.vhd"
+vhdl work "VGA.vhd"
+vhdl work "SPI.vhd"
+vhdl work "Schem.vhf"

@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o "C:\Users\Asger\Dropbox\Projekt (PRO) (4.sem.)\Xilinx\VGA\VGA og SPI\FPGA_Program//PROM" -x xcf04s -u 00000000 "C:/Users/Asger/Dropbox/Projekt (PRO) (4.sem.)/Xilinx/VGA/VGA og SPI/FPGA_Program/schem_cclktemp.bit" 
+
+PROM C:\Users\Asger\Dropbox\Projekt (PRO) (4.sem.)\Xilinx\VGA\VGA og SPI\FPGA_Program\PROM.prm map: Tue May 05 10:54:18 2015
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          512K
+PROM start    0000:0000
+PROM end      0007:ffff
+PROM checksum 03b2bc1d
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0004:547f     May 05 10:54:10 2015 C:/Users/Asger/Dropbox/Projekt (PRO) (4.sem.)/Xilinx/VGA/VGA og SPI/FPGA_Program/schem_cclktemp.bit

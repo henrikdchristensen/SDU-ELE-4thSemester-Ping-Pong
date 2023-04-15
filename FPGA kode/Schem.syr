@@ -1,0 +1,696 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.62 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.62 secs
+ 
+--> Reading design: Schem.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Schem.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Schem"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Schem
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/SPI.vhd" in Library work.
+Entity <SPI> compiled.
+Entity <SPI> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/ipcore_dir/Memory.vhd" in Library work.
+Entity <Memory> compiled.
+Entity <Memory> (Architecture <Memory_a>) compiled.
+Compiling vhdl file "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/VGA.vhd" in Library work.
+Entity <VGA> compiled.
+Entity <VGA> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/Schem.vhf" in Library work.
+Entity <Schem> compiled.
+Entity <Schem> (Architecture <BEHAVIORAL>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Schem> in library <work> (architecture <BEHAVIORAL>).
+
+Analyzing hierarchy for entity <SPI> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <VGA> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Schem> in library <work> (Architecture <BEHAVIORAL>).
+WARNING:Xst:2211 - "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/Schem.vhf" line 101: Instantiating black box module <Memory>.
+Entity <Schem> analyzed. Unit <Schem> generated.
+
+Analyzing Entity <SPI> in library <work> (Architecture <Behavioral>).
+Entity <SPI> analyzed. Unit <SPI> generated.
+
+Analyzing Entity <VGA> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:819 - "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/VGA.vhd" line 126: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <tgl_btn>, <SW>
+INFO:Xst:1561 - "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/VGA.vhd" line 172: Mux is complete : default of case is discarded
+Entity <VGA> analyzed. Unit <VGA> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <SPI>.
+    Related source file is "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/SPI.vhd".
+    Found finite state machine <FSM_0> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 13                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 6                                              |
+    | Clock              | Clk                       (rising_edge)        |
+    | Power Up State     | wait_for_ss_first_low                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <WE>.
+    Found 1-bit register for signal <Databus>.
+    Found 19-bit register for signal <Adrbus>.
+    Found 10-bit register for signal <inbufA>.
+    Found 10-bit register for signal <inbufB>.
+    Found 32-bit comparator not equal for signal <inbufB_0$cmp_ne0002> created at line 108.
+    Found 20-bit register for signal <outbuf>.
+    Found 32-bit up counter for signal <SClkcnt>.
+    Found 32-bit register for signal <SClkcnt_old>.
+    Found 2-bit up counter for signal <SScnt>.
+    Found 2-bit comparator greater for signal <SScnt$cmp_gt0000> created at line 59.
+    Found 32-bit adder for signal <State$add0000> created at line 86.
+    Found 32-bit comparator equal for signal <State$cmp_eq0001> created at line 86.
+    Found 2-bit register for signal <xSClk>.
+    Found 2-bit register for signal <xSS>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 Counter(s).
+	inferred  97 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <SPI> synthesized.
+
+
+Synthesizing Unit <VGA>.
+    Related source file is "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/VGA.vhd".
+WARNING:Xst:1780 - Signal <wait1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <an_select> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 1-bit latch for signal <green_color_off_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green_color_off_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green_color_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green_color_off_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green_color_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <green_color_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue_color_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue_color_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red_color_off_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red_color_off_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red_color_off_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red_color_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue_color_off_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red_color_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <blue_color_off_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <red_color_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4x12-bit ROM for signal <clk100hz_9_8$rom0000>.
+    Found 4-bit register for signal <AN>.
+    Found 8-bit register for signal <abcdefg>.
+    Found 2-bit register for signal <blue_out>.
+    Found 3-bit register for signal <red_out>.
+    Found 19-bit register for signal <adr>.
+    Found 1-bit register for signal <vs_out>.
+    Found 3-bit register for signal <green_out>.
+    Found 1-bit register for signal <hs_out>.
+    Found 19-bit up counter for signal <Adrcount>.
+    Found 10-bit up counter for signal <clk100hz>.
+    Found 1-bit register for signal <clk25>.
+    Found 10-bit up counter for signal <horizontal_counter>.
+    Found 10-bit comparator greater for signal <hs_out$cmp_gt0000> created at line 92.
+    Found 10-bit comparator less for signal <hs_out$cmp_lt0000> created at line 92.
+    Found 10-bit comparator greatequal for signal <red_out$cmp_ge0000> created at line 60.
+    Found 10-bit comparator greatequal for signal <red_out$cmp_ge0001> created at line 60.
+    Found 10-bit comparator less for signal <red_out$cmp_lt0000> created at line 60.
+    Found 10-bit comparator less for signal <red_out$cmp_lt0001> created at line 60.
+    Found 10-bit up counter for signal <vertical_counter>.
+    Found 10-bit comparator greater for signal <vs_out$cmp_gt0000> created at line 102.
+    Found 10-bit comparator less for signal <vs_out$cmp_lt0000> created at line 102.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   4 Counter(s).
+	inferred  42 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+Unit <VGA> synthesized.
+
+
+Synthesizing Unit <Schem>.
+    Related source file is "C:/Users/Christian/Dropbox/Projekt (PRO) 4. semester/Projekt-CD/FPGA kode/Schem.vhf".
+Unit <Schem> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x12-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 6
+ 10-bit up counter                                     : 3
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 36
+ 1-bit register                                        : 25
+ 19-bit register                                       : 2
+ 2-bit register                                        : 3
+ 20-bit register                                       : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Comparators                                          : 11
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 4
+ 2-bit comparator greater                              : 1
+ 32-bit comparator equal                               : 1
+ 32-bit comparator not equal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_2/State/FSM> on signal <State[1:3]> with gray encoding.
+------------------------------------
+ State                  | Encoding
+------------------------------------
+ wait_for_ss_first_low  | 000
+ wait_for_ss_second_low | 011
+ receive_first_data     | 001
+ receive_second_data    | 010
+ send_data              | 110
+------------------------------------
+Reading core <ipcore_dir/Memory.ngc>.
+Loading core <Memory> for timing and area information for instance <XLXI_3>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 4x12-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 6
+ 10-bit up counter                                     : 3
+ 19-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 139
+ Flip-Flops                                            : 139
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Comparators                                          : 11
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator greater                             : 2
+ 10-bit comparator less                                : 4
+ 2-bit comparator greater                              : 1
+ 32-bit comparator equal                               : 1
+ 32-bit comparator not equal                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <abcdefg_0> (without init value) has a constant value of 0 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <abcdefg_1> (without init value) has a constant value of 0 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <abcdefg_5> (without init value) has a constant value of 0 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <abcdefg_7> (without init value) has a constant value of 1 in block <VGA>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Schem> ...
+
+Optimizing unit <SPI> ...
+
+Optimizing unit <VGA> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Schem, actual ratio is 4.
+
+Final Macro Processing ...
+
+Processing Unit <Schem> :
+	Found 2-bit shift register for signal <XLXI_2/Databus>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_18>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_17>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_16>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_15>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_14>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_13>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_12>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_11>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_10>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_9>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_8>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_7>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_6>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_5>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_4>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_3>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_2>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_1>.
+	Found 2-bit shift register for signal <XLXI_2/Adrbus_0>.
+Unit <Schem> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 181
+ Flip-Flops                                            : 181
+# Shift Registers                                      : 20
+ 2-bit shift register                                  : 20
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Schem.ngr
+Top Level Output File Name         : Schem
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 56
+
+Cell Usage :
+# BELS                             : 578
+#      GND                         : 2
+#      INV                         : 10
+#      LUT1                        : 107
+#      LUT2                        : 24
+#      LUT3                        : 26
+#      LUT3_D                      : 6
+#      LUT3_L                      : 1
+#      LUT4                        : 140
+#      LUT4_D                      : 7
+#      LUT4_L                      : 4
+#      MUXCY                       : 128
+#      MUXF5                       : 5
+#      MUXF6                       : 2
+#      MUXF7                       : 1
+#      VCC                         : 2
+#      XORCY                       : 113
+# FlipFlops/Latches                : 222
+#      FD                          : 38
+#      FD_1                        : 4
+#      FDE                         : 74
+#      FDR                         : 23
+#      FDRE                        : 63
+#      FDS                         : 4
+#      LD                          : 16
+# RAMS                             : 19
+#      RAMB16_S1_S1                : 19
+# Shift Registers                  : 20
+#      SRL16E                      : 20
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 55
+#      IBUF                        : 13
+#      OBUF                        : 42
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      208  out of   4656     4%  
+ Number of Slice Flip Flops:            214  out of   9312     2%  
+ Number of 4 input LUTs:                345  out of   9312     3%  
+    Number used as logic:               325
+    Number used as Shift registers:      20
+ Number of IOs:                          56
+ Number of bonded IOBs:                  56  out of    232    24%  
+    IOB Flip Flops:                       8
+ Number of BRAMs:                        19  out of     20    95%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------+----------------------------------+-------+
+Clock Signal                                                               | Clock buffer(FF name)            | Load  |
+---------------------------------------------------------------------------+----------------------------------+-------+
+XLXI_4/clk251                                                              | BUFG                             | 100   |
+clk50_in                                                                   | BUFGP                            | 164   |
+XLXI_4/green_color_off_0_cmp_eq0000(XLXI_4/green_color_off_0_cmp_eq00001:O)| NONE(*)(XLXI_4/green_color_off_0)| 8     |
+XLXI_4/green_color_0_cmp_eq0000(XLXI_4/green_color_0_cmp_eq00001:O)        | NONE(*)(XLXI_4/green_color_0)    | 8     |
+---------------------------------------------------------------------------+----------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 10.441ns (Maximum Frequency: 95.776MHz)
+   Minimum input arrival time before clock: 2.628ns
+   Maximum output required time after clock: 4.965ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_4/clk251'
+  Clock period: 8.298ns (frequency: 120.511MHz)
+  Total number of paths / destination ports: 2995 / 453
+-------------------------------------------------------------------------
+Delay:               8.298ns (Levels of Logic = 7)
+  Source:            XLXI_3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp1x1.ram (RAM)
+  Destination:       XLXI_4/green_out_2 (FF)
+  Source Clock:      XLXI_4/clk251 rising
+  Destination Clock: XLXI_4/clk251 rising
+
+  Data Path: XLXI_3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp1x1.ram to XLXI_4/green_out_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S1_S1:CLKB->DOB0    1   2.800   0.499  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s3_noinit.ram/dpram.dp1x1.ram (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.ram_doutb)
+     LUT3:I1->O            1   0.704   0.000  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux_11 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux_11)
+     MUXF5:I0->O           1   0.321   0.000  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux_9_f5 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux_9_f5)
+     MUXF6:I0->O           1   0.521   0.000  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux_7_f6 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux_7_f6)
+     MUXF7:I0->O           1   0.521   0.424  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux_5_f7 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/Mmux_dout_mux_5_f7)
+     LUT4:I3->O            8   0.704   0.792  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe<4> (doutb<0>)
+     end scope: 'XLXI_3'
+     LUT3:I2->O            1   0.704   0.000  XLXI_4/red_out_mux0002<2>1 (XLXI_4/red_out_mux0002<2>)
+     FDR:D                     0.308          XLXI_4/red_out_2
+    ----------------------------------------
+    Total                      8.298ns (6.583ns logic, 1.715ns route)
+                                       (79.3% logic, 20.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50_in'
+  Clock period: 10.441ns (frequency: 95.776MHz)
+  Total number of paths / destination ports: 32655 / 585
+-------------------------------------------------------------------------
+Delay:               10.441ns (Levels of Logic = 31)
+  Source:            XLXI_2/SClkcnt_old_1 (FF)
+  Destination:       XLXI_2/inbufA_8 (FF)
+  Source Clock:      clk50_in rising
+  Destination Clock: clk50_in rising
+
+  Data Path: XLXI_2/SClkcnt_old_1 to XLXI_2/inbufA_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.591   0.622  XLXI_2/SClkcnt_old_1 (XLXI_2/SClkcnt_old_1)
+     LUT1:I0->O            1   0.704   0.000  XLXI_2/Madd_State_add0000_cy<1>_rt (XLXI_2/Madd_State_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  XLXI_2/Madd_State_add0000_cy<1> (XLXI_2/Madd_State_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<2> (XLXI_2/Madd_State_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<3> (XLXI_2/Madd_State_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<4> (XLXI_2/Madd_State_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<5> (XLXI_2/Madd_State_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<6> (XLXI_2/Madd_State_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<7> (XLXI_2/Madd_State_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<8> (XLXI_2/Madd_State_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<9> (XLXI_2/Madd_State_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<10> (XLXI_2/Madd_State_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<11> (XLXI_2/Madd_State_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<12> (XLXI_2/Madd_State_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<13> (XLXI_2/Madd_State_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<14> (XLXI_2/Madd_State_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<15> (XLXI_2/Madd_State_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<16> (XLXI_2/Madd_State_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<17> (XLXI_2/Madd_State_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<18> (XLXI_2/Madd_State_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<19> (XLXI_2/Madd_State_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<20> (XLXI_2/Madd_State_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<21> (XLXI_2/Madd_State_add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<22> (XLXI_2/Madd_State_add0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<23> (XLXI_2/Madd_State_add0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<24> (XLXI_2/Madd_State_add0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_2/Madd_State_add0000_cy<25> (XLXI_2/Madd_State_add0000_cy<25>)
+     XORCY:CI->O           1   0.804   0.499  XLXI_2/Madd_State_add0000_xor<26> (XLXI_2/State_add0000<26>)
+     LUT4:I1->O            1   0.704   0.000  XLXI_2/Mcompar_State_cmp_eq0001_lut<13> (XLXI_2/Mcompar_State_cmp_eq0001_lut<13>)
+     MUXCY:S->O            3   0.864   0.566  XLXI_2/Mcompar_State_cmp_eq0001_cy<13> (XLXI_2/Mcompar_State_cmp_eq0001_cy<13>)
+     LUT3_D:I2->O          9   0.704   0.824  XLXI_2/Mcompar_State_cmp_eq0001_cy<15>1_1 (XLXI_2/Mcompar_State_cmp_eq0001_cy<15>1)
+     LUT4:I3->O            1   0.704   0.420  XLXI_2/inbufB_9_not00011 (XLXI_2/inbufB_9_not0001)
+     FDE:CE                    0.555          XLXI_2/inbufB_9
+    ----------------------------------------
+    Total                     10.441ns (7.510ns logic, 2.931ns route)
+                                       (71.9% logic, 28.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50_in'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              2.628ns (Levels of Logic = 1)
+  Source:            MOSI (PAD)
+  Destination:       XLXI_2/inbufA_9 (FF)
+  Destination Clock: clk50_in rising
+
+  Data Path: MOSI to XLXI_2/inbufA_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.218   1.102  MOSI_IBUF (MOSI_IBUF)
+     FDE:D                     0.308          XLXI_2/inbufB_0
+    ----------------------------------------
+    Total                      2.628ns (1.526ns logic, 1.102ns route)
+                                       (58.1% logic, 41.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_4/green_color_off_0_cmp_eq0000'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              1.973ns (Levels of Logic = 1)
+  Source:            SW<3> (PAD)
+  Destination:       XLXI_4/green_color_off_0 (LATCH)
+  Destination Clock: XLXI_4/green_color_off_0_cmp_eq0000 falling
+
+  Data Path: SW<3> to XLXI_4/green_color_off_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.447  SW_3_IBUF (SW_3_IBUF)
+     LD:D                      0.308          XLXI_4/green_color_off_0
+    ----------------------------------------
+    Total                      1.973ns (1.526ns logic, 0.447ns route)
+                                       (77.3% logic, 22.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_4/green_color_0_cmp_eq0000'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              1.973ns (Levels of Logic = 1)
+  Source:            SW<3> (PAD)
+  Destination:       XLXI_4/green_color_0 (LATCH)
+  Destination Clock: XLXI_4/green_color_0_cmp_eq0000 falling
+
+  Data Path: SW<3> to XLXI_4/green_color_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.447  SW_3_IBUF (SW_3_IBUF)
+     LD:D                      0.308          XLXI_4/green_color_0
+    ----------------------------------------
+    Total                      1.973ns (1.526ns logic, 0.447ns route)
+                                       (77.3% logic, 22.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_4/clk251'
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            XLXI_4/vs_out (FF)
+  Destination:       vs_out (PAD)
+  Source Clock:      XLXI_4/clk251 rising
+
+  Data Path: XLXI_4/vs_out to vs_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.591   0.420  XLXI_4/vs_out (XLXI_4/vs_out)
+     OBUF:I->O                 3.272          vs_out_OBUF (vs_out)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50_in'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              4.965ns (Levels of Logic = 1)
+  Source:            XLXI_2/Databus (FF)
+  Destination:       Data<0> (PAD)
+  Source Clock:      clk50_in rising
+
+  Data Path: XLXI_2/Databus to Data<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             20   0.591   1.102  XLXI_2/Databus (XLXI_2/Databus)
+     OBUF:I->O                 3.272          Data_0_OBUF (Data<0>)
+    ----------------------------------------
+    Total                      4.965ns (3.863ns logic, 1.102ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 19.77 secs
+ 
+--> 
+
+Total memory usage is 297924 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

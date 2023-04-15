@@ -1,0 +1,4 @@
+vhdtdtfi -lib work VGA.vhd -prj FPGA_Program -o VGA.spl -module VGA -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA.spl C:/Users/Martin/SkyDrive/Uni/FPGA_Program/VGA.sym 
+vhdtdtfi -lib work VGA.vhd -prj FPGA_Program -o VGA.spl -module VGA -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e VGA.spl C:/Users/Martin/SkyDrive/Uni/FPGA_Program/VGA.sym 

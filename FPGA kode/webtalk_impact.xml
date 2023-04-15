@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="impact" timeStamp="Wed May 06 12:14:35 2015">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="c94d7ca6f74946c6a374980f68730670"/>
+<property name="ProjectIteration" value="1"/>
+</section>
+<section name="iMPACT Project Info" visible="true">
+<property name="Use Project File" value="No"/>
+<property name="Project Entry" value="ise"/>
+<property name="OS Name" value="Microsoft Windows NT (64 Bit)"/>
+<property name="User Lic. Info" value="211002755_0_0_810"/>
+</section>
+<section name="iMPACT Serial PROM File Generation Mode" visible="true">
+<item name="Chain Description">
+<property name="Number of device" value="1"/>
+<property name="Device1" value="spartan3e"/>
+<property name="Part1" value="xc3s500e"/>
+</item>
+</section>
+</application>
+</document>

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Christian\Dropbox\Projekt (PRO) 4. semester\Projekt-CD\FPGA kode\Schem.ncd
+OUTFILE=C:\Users\Christian\Dropbox\Projekt (PRO) 4. semester\Projekt-CD\FPGA kode\Schem.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\Christian\Dropbox\Projekt (PRO) 4. semester\Projekt-CD\FPGA kode
+LICENSE=WebPack
+USER_INFO=211002762_0_0_272

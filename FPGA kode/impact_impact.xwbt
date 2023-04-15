@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\Martin\SkyDrive\Uni\FPGA_Program\impact.xsl
+OUTFILE=C:\Users\Martin\SkyDrive\Uni\FPGA_Program\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=C:\Users\Martin\SkyDrive\Uni\FPGA_Program
+LICENSE=iMPACT
+USER_INFO=iMPACT

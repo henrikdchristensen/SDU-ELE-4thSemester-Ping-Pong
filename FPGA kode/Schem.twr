@@ -1,0 +1,144 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml Schem.twx Schem.ncd -o Schem.twr Schem.pcf -ucf Schem.ucf
+
+Design file:              Schem.ncd
+Physical constraint file: Schem.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk50_in
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+MOSI        |    1.742(R)|    0.722(R)|clk50_in_BUFGP    |   0.000|
+SClk        |    1.075(F)|    0.350(F)|clk50_in_BUFGP    |   0.000|
+SS          |    0.062(F)|    1.160(F)|clk50_in_BUFGP    |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock tgl_btn<0>
+------------+------------+------------+-----------------------------------+--------+
+            |Max Setup to|Max Hold to |                                   | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s)                  | Phase  |
+------------+------------+------------+-----------------------------------+--------+
+SW<0>       |   -0.908(F)|    2.856(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -0.266(F)|    2.334(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<1>       |   -1.027(F)|    2.951(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -0.417(F)|    2.454(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<2>       |   -0.428(F)|    2.474(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -0.988(F)|    2.912(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<3>       |   -1.509(F)|    3.344(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -1.582(F)|    3.434(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<4>       |   -1.622(F)|    3.434(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -1.695(F)|    3.524(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<5>       |   -1.816(F)|    3.587(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -1.212(F)|    3.092(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<6>       |   -0.522(F)|    2.599(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -1.068(F)|    3.023(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<7>       |   -0.229(F)|    2.365(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -0.816(F)|    2.820(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+------------+------------+------------+-----------------------------------+--------+
+
+Setup/Hold to clock tgl_btn<1>
+------------+------------+------------+-----------------------------------+--------+
+            |Max Setup to|Max Hold to |                                   | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s)                  | Phase  |
+------------+------------+------------+-----------------------------------+--------+
+SW<0>       |   -1.095(F)|    3.090(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -0.447(F)|    2.561(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<1>       |   -1.214(F)|    3.185(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -0.598(F)|    2.681(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<2>       |   -0.615(F)|    2.708(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -1.169(F)|    3.139(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<3>       |   -1.696(F)|    3.578(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -1.763(F)|    3.661(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<4>       |   -1.809(F)|    3.668(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -1.876(F)|    3.751(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<5>       |   -2.003(F)|    3.821(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -1.393(F)|    3.319(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<6>       |   -0.709(F)|    2.833(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -1.249(F)|    3.250(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+SW<7>       |   -0.416(F)|    2.599(F)|XLXI_4/green_color_0_cmp_eq0000    |   0.000|
+            |   -0.997(F)|    3.047(F)|XLXI_4/green_color_off_0_cmp_eq0000|   0.000|
+------------+------------+------------+-----------------------------------+--------+
+
+Clock clk50_in to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+Data<0>     |    8.933(R)|clk50_in_BUFGP    |   0.000|
+LED<0>      |    8.679(R)|clk50_in_BUFGP    |   0.000|
+LED<1>      |    8.505(R)|clk50_in_BUFGP    |   0.000|
+LED<2>      |    8.564(R)|clk50_in_BUFGP    |   0.000|
+LED<3>      |    9.311(R)|clk50_in_BUFGP    |   0.000|
+LED<4>      |    9.213(R)|clk50_in_BUFGP    |   0.000|
+LED<5>      |   10.185(R)|clk50_in_BUFGP    |   0.000|
+LED<6>      |   10.068(R)|clk50_in_BUFGP    |   0.000|
+LED<7>      |    8.917(R)|clk50_in_BUFGP    |   0.000|
+LED<8>      |    8.808(R)|clk50_in_BUFGP    |   0.000|
+LED<9>      |    8.712(R)|clk50_in_BUFGP    |   0.000|
+LED<10>     |    9.085(R)|clk50_in_BUFGP    |   0.000|
+LED<11>     |    8.813(R)|clk50_in_BUFGP    |   0.000|
+LED<12>     |    8.636(R)|clk50_in_BUFGP    |   0.000|
+LED<13>     |    8.509(R)|clk50_in_BUFGP    |   0.000|
+LED<14>     |    8.594(R)|clk50_in_BUFGP    |   0.000|
+LED<15>     |    8.244(R)|clk50_in_BUFGP    |   0.000|
+LED<16>     |    8.092(R)|clk50_in_BUFGP    |   0.000|
+LED<17>     |    8.565(R)|clk50_in_BUFGP    |   0.000|
+LED<18>     |    9.067(R)|clk50_in_BUFGP    |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk50_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk50_in       |   11.013|    5.040|         |    1.521|
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue May 26 14:48:39 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 198 MB
+
+
+
